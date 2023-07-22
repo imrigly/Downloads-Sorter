@@ -1,34 +1,48 @@
-a: str = "Audio"
-c: str = "Compressed Files"
-i: str = "Images"
-t: str = "Torrents"
-m: str = "3DModels"
-e: str = "Executables"
-v: str = "Videos"
-
-
-
-
 #dictionary
 FileTypes: dict =  {
-    "exe":e,
-    "msi":e,
-    "torrent":t,
-    "png":i,
-    "svg":i,
-    "jpg":i,
-    "jpeg":i,
-    "gif":i,
-    "zip":c,
-    "7z":c,
-    "rar":c,
-    "wav":a,
-    "mp3":a,
-    "flac":a,
-    "m4a": a,
-    "mkv":v,
-    "avi":v,
-    "mp4":v,
-    "webm":v,
-    "stl":m
+    "exe":"Executables",
+    "msi":"Executables",
+    "apk":"Executables",
+    "torrent":"Torrents",
+    "png":"Images",
+    "svg":"Images",
+    "jpg":"Images",
+    "jpeg":"Images",
+    "gif":"Images",
+    "bmp":"Images",
+    "ico":"Images",
+    "zip":"Compressed Files",
+    "7z":"Compressed Files",
+    "rar":"Compressed Files",
+    "gz":"Compressed Files",
+    "wav":"Audio",
+    "mp3":"Audio",
+    "flac":"Audio",
+    "m4a":"Audio",
+    "ogg":"Audio",
+    "mpa":"Audio",
+    "mid":"Audio",
+    "midi":"Audio",
+    "mkv":"Videos",
+    "avi":"Videos",
+    "mp4":"Videos",
+    "webm":"Videos",
+    "stl":"3DModels",
+    "pdf":"Documents",
+    "pptx":"Documents",
+    "html":"Documents",
+    "md":"Documents",
+    "txt":"Documents",
+    "docx":"Documents",
+    "doc":"Documents",
+    "xml":"Documents",
+    "xls":"Documents",
+    "xlsx":"Documents",
+    "rtf":"Documents",
+    "ppt":"Documents",
+    "key":"Documents",
+    "odp":"Documents",
+    "pps":"Documents",
+    "ods":"Documents",
+    "odt":"Documents",
 }
