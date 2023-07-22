@@ -2,6 +2,7 @@ from CmdSorter import Main
 from CmdSorterSilent import silentMain
 import tkinter as tk
 from random import randint
+from DictTypes import FileTypes
 
 title: str
 
@@ -12,13 +13,9 @@ def pickTitle():
     elif roll == 9:
         title = "ImRigly's Downloads Sorter: Also try Cruelty Squad!"
     else: title = "ImRigly's Downloads Sorter"
-    print(roll)
     return title
 
 gui = tk.Tk()
-
-
-
 
 if __name__ == "__main__":
     
@@ -36,6 +33,26 @@ if __name__ == "__main__":
 
     sortbutton = tk.Button(gui, text="SORT", font=('', 30, 'bold'), fg='#232323', bg='#c12c3f', activebackground='#f04e65', bd=0, command=Main).pack()
     
+    typetext = tk.Label(gui, text='Enter a new Filetype:', bg='#6281a2').pack()
+    
+    typeinput = tk.Entry(gui)
+    typeinput.pack()
+    
+    foldertext = tk.Label(gui, text='Enter a Foldername for this type:', bg='#6281a2').pack()
+    
+    folderinput = tk.Entry(gui)
+    folderinput.pack()
+    
+
+    
+    def SendToDict():
+        type = typeinput.get()
+        folder = folderinput.get()
+        FileTypes[type]=folder
+        print(FileTypes)
+        return FileTypes
+
+    sendtodict = tk.Button(gui, text='Send (DOES NOT WORK!!!)', fg='#232323', bg='#c12c3f', activebackground='#f04e65', bd=0, command=SendToDict).pack()
     gui.mainloop()
 
 
