@@ -45,4 +45,5 @@ FileTypes: dict =  {
     "pps":"Documents",
     "ods":"Documents",
     "odt":"Documents",
+    "gpl":"Colour Pallettes"
 }

@@ -9,15 +9,11 @@ username: str
 def usernameCheck():  
     
     #opens "username" file
-    usernamefile = open('username.txt', 'r+')
-    
-    #username check
-    if usernamefile.read(1) == '':
-        username = input('[SYSTEM]: Please input your username: ')
-        usernamefile.write(' ' + username)
-    else: username = usernamefile.read()
-    
-    #allows assignment
+    usernamefile = open('username.txt', 'w+')
+    username = os.getlogin()
+    usernamefile.write(username)
+
+    #gives a value to assign to the username variable outside of this function
     return username
 
 #usermane assignment
