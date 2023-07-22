@@ -1,6 +1,8 @@
+import keyboard
 import glob
 import os
 from DictTypes import FileTypes
+import tkinter as t
 
 #username declaration
 username: str
@@ -66,6 +68,11 @@ def Main():
     
 #makes sure that you are runnig this directly
 if __name__ == '__main__':
-    Main()
+    base = t.Tk()
+    base.geometry("640x480")
+    base.title("Downloads Sorter: Also try Terraria!")
+    label = t.Label(base, text='Click to sort your downloads folder', font=('Comic Sans MS', 20))
+    label.pack()
+    base.mainloop()
     
     
