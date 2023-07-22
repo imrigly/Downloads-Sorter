@@ -2,6 +2,7 @@ import keyboard
 import glob
 import os
 from DictTypes import FileTypes
+import tkinter as t
 
 #username declaration
 username: str
@@ -54,10 +55,19 @@ def sortCall():
         for Extension, FolderName in FileTypes.items():
             fileSort(Extension, FolderName)
         print("[COMPLETE]: All done!")
-        
-#good practice
+    
+#Calls other functions    
+def Main():
+    
+    #error handling
+    try:
+        folderCheck()
+        sortCall()
+    except PermissionError:
+        print("A Permission Error has occurred! Try changing your username in the username.txt file.")
+    
+#makes sure that you are runnig this directly
 if __name__ == '__main__':
-    folderCheck()
-    sortCall()
+    Main()
     
     
