@@ -38,7 +38,7 @@ if __name__ == "__main__":
 
     sortbutton = tk.Button(gui, text="SORT", font=('', 30, 'bold'), fg='#232323', bg='#c12c3f', activebackground='#f04e65', bd=0, command=Main).pack()
     
-    typetext = tk.Label(gui, text='(NO SPACES OR QUOTATION MARKS)Enter a new Filetype: ', bg='#6281a2').pack()
+    typetext = tk.Label(gui, text='(NO DOTS, SPACES OR QUOTATION MARKS)Enter a new Filetype: ', bg='#6281a2').pack()
     
     typeinput = tk.Entry(gui)
     typeinput.pack()
@@ -58,7 +58,7 @@ if __name__ == "__main__":
             pickle.dump(FileTypes, f)
         return FileTypes
 
-    sendtodict = tk.Button(gui, text='Send (RESTART AFTER SENDING!!!)', fg='#232323', bg='#c12c3f', activebackground='#f04e65', bd=0, command=SendToDict).pack()
+    sendtodict = tk.Button(gui, text='Send', fg='#232323', bg='#c12c3f', activebackground='#f04e65', bd=0, command=SendToDict).pack()
     
     deltype = tk.Label(gui, text='Enter a Filetype to remove from the DictTypes dictionary :', bg='#6281a2').pack()
     
