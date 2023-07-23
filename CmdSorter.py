@@ -1,23 +1,12 @@
 import glob
 import os
-from DictTypes import FileTypes
+import pickle
 
-#username declaration
-username: str
+with open('DictTypes.pkl', 'rb') as f:
+    FileTypes = pickle.load(f)
 
-#checks if username.txt is not empty
-def usernameCheck():  
-    
-    #opens "username" file
-    usernamefile = open('username.txt', 'w+')
-    username = os.getlogin()
-    usernamefile.write(username)
-
-    #gives a value to assign to the username variable outside of this function
-    return username
-
-#usermane assignment
-username = usernameCheck()
+#username assingment
+username: str = os.getlogin()
 
 #sorts files
 def fileSort(Extension, FolderName):
@@ -58,7 +47,7 @@ def Main():
         folderCheck()
         sortCall()
     except PermissionError:
-        print("A Permission Error has occurred! Try changing your username in the username.txt file.")
+        print("A Permission Error has occurred!")
     
 #makes sure that you are runnig this directly
 if __name__ == '__main__':

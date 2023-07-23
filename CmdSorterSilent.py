@@ -1,6 +1,9 @@
 import glob
 import os
-from SorterGUI import FileTypes
+import pickle
+
+with open('DictTypes.pkl', 'rb') as f:
+    FileTypes = pickle.load(f)
 
 #username assignment
 username: str = os.getlogin()
