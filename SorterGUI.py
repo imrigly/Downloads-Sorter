@@ -42,12 +42,12 @@ if __name__ == "__main__":
 
     sortbutton = tk.Button(gui, text="SORT", font=('', 30, 'bold'), fg='#232323', bg='#c12c3f', activebackground='#f04e65', bd=0, command=Main).pack()
     
-    typetext = tk.Label(gui, text='Enter a new Filetype:', bg='#6281a2').pack()
+    typetext = tk.Label(gui, text='(NO SPACES OR QUOTATION MARKS)Enter a new Filetype: ', bg='#6281a2').pack()
     
     typeinput = tk.Entry(gui)
     typeinput.pack()
     
-    foldertext = tk.Label(gui, text='Enter a Foldername for this type:', bg='#6281a2').pack()
+    foldertext = tk.Label(gui, text='(NO SPACES OR QUOTATION MARKS)Enter a Foldername for this type:', bg='#6281a2').pack()
     
     folderinput = tk.Entry(gui)
     folderinput.pack()
