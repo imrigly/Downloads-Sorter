@@ -1,27 +1,9 @@
 import glob
 import os
-from DictTypes import FileTypes
+from SorterGUI import FileTypes
 
-#username declaration
-username: str
-
-#checks if username.txt is not empty
-def usernameCheck():  
-    
-    #opens "username" file
-    usernamefile = open('username.txt', 'r+')
-    
-    #username check
-    if usernamefile.read(1) == '':
-        username = input('[SYSTEM]: Please input your username: ')
-        usernamefile.write(' ' + username)
-    else: username = usernamefile.read()
-    
-    #allows assignment
-    return username
-
-#usermane assignment
-username = usernameCheck()
+#username assignment
+username: str = os.getlogin()
 
 #sorts files
 def fileSort(Extension, FolderName):

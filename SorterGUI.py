@@ -52,7 +52,7 @@ if __name__ == "__main__":
         print(FileTypes)
         return FileTypes
 
-    sendtodict = tk.Button(gui, text='Send (DOES NOT WORK!!!)', fg='#232323', bg='#c12c3f', activebackground='#f04e65', bd=0, command=SendToDict).pack()
+    sendtodict = tk.Button(gui, text='Send (temporary change!!!)', fg='#232323', bg='#c12c3f', activebackground='#f04e65', bd=0, command=SendToDict).pack()
     gui.mainloop()
 
 

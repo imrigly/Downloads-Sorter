@@ -1,1 +1,0 @@
- & C:/Users/imrig/AppData/Local/Programs/Python/Python311/python.exe "c:/Users/imrig/Documents/Code Projects/Automation/DownloadsSorter.py"
