@@ -1,5 +1,5 @@
 from CmdSorter import Main
-from CmdSorterSilent import silentMain
+#from CmdSorterSilent import silentMain
 import tkinter as tk
 from random import randint
 import pickle
