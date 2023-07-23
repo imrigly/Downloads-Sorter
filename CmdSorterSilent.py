@@ -1,29 +1,12 @@
-import keyboard
 import glob
 import os
-from DictTypes import FileTypes
-import tkinter as t
+import pickle
 
-#username declaration
-username: str
+with open('DictTypes.pkl', 'rb') as f:
+    FileTypes = pickle.load(f)
 
-#checks if username.txt is not empty
-def usernameCheck():  
-    
-    #opens "username" file
-    usernamefile = open('username.txt', 'r+')
-    
-    #username check
-    if usernamefile.read(1) == '':
-        username = input('[SYSTEM]: Please input your username: ')
-        usernamefile.write(' ' + username)
-    else: username = usernamefile.read()
-    
-    #allows assignment
-    return username
-
-#usermane assignment
-username = usernameCheck()
+#username assignment
+username: str = os.getlogin()
 
 #sorts files
 def fileSort(Extension, FolderName):
@@ -53,7 +36,7 @@ def sortCall():
             fileSort(Extension, FolderName)
     
 #Calls other functions    
-def Main():
+def silentMain():
     
     #error handling
     try:
@@ -65,6 +48,7 @@ def Main():
 #makes sure that you are runnig this directly
 if __name__ == '__main__':
     while True:
-        Main()
+        silentMain()
+
     
     
